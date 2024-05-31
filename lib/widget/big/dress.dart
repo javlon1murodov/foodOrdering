@@ -85,8 +85,9 @@ class Dressed extends StatelessWidget {
                 child: IconButton(
                   onPressed: (){
                     Navigator.push(context, MaterialPageRoute(builder: (context){
-                      return const Choose();
-                    }));
+                      return const Otp();
+                    }
+                    ));
                   },
                   icon: Image.asset("assets/icons/arr.png"),
                 ),

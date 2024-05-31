@@ -40,26 +40,30 @@ class _MenuState extends State<Menu> {
           ),
         ],
       ),
-      bottomNavigationBar: Container(
-        child: BottomNavigationBar(
-          iconSize: 33,
-          unselectedItemColor: Colors.black,
-          selectedItemColor: Colors.deepPurple,
-          currentIndex: myCurrentIndex,
-          onTap: (index){
-            setState(() {
-              myCurrentIndex=index;
-            });
-          },
-           items: [
-             BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
-             BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
-             BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: ""),
-             BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "")
-          ],
-        ),
-      ),
+      bottomNavigationBar: bar(),
       body:pages[myCurrentIndex] ,
+    );
+  }
+
+  Container bar() {
+    return Container(
+      child: BottomNavigationBar(
+        iconSize: 33,
+        unselectedItemColor: Colors.black,
+        selectedItemColor: Colors.deepPurple,
+        currentIndex: myCurrentIndex,
+        onTap: (index){
+          setState(() {
+            myCurrentIndex=index;
+          });
+        },
+         items: [
+           BottomNavigationBarItem(icon: Icon(Icons.home), label: ""),
+           BottomNavigationBarItem(icon: Icon(Icons.search), label: ""),
+           BottomNavigationBarItem(icon: Icon(Icons.shopping_cart_outlined), label: ""),
+           BottomNavigationBarItem(icon: Icon(Icons.account_circle_outlined), label: "")
+        ],
+      ),
     );
   }
 }

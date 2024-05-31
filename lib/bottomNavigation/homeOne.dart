@@ -17,9 +17,7 @@ class _HomeOneState extends State<HomeOne> {
       body:SingleChildScrollView(
         scrollDirection: Axis.vertical,
         child: Column(
-
           children: <Widget>[
-
             const SearchTwo(),
             const SizedBox(height: 25,),
             const Bigcategory(),
@@ -97,18 +95,40 @@ class _HomeOneState extends State<HomeOne> {
                   fontWeight: FontWeight.w500
               ),),
             ),
-            const Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            const Column(
               children:<Widget> [
-               ThreeCategory(
-                  image: "assets/icons/burger_sandwich 2.png",
-                  title: "Mol go'shti burger",
-                  narx: "\$20",
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:<Widget> [
+                   ThreeCategory(
+                      image: "assets/icons/burger_sandwich 2.png",
+                      title: "Mol go'shti burger",
+                      narx: "\$20",
+                    ),
+                    ThreeCategory(
+                      image: "assets/icons/burger_sandwich 2.png",
+                      title: "Mol go'shti burger",
+                      narx: "\$20",
+                    ),
+                    
+                  ],
                 ),
-                ThreeCategory(
-                  image: "assets/icons/burger_sandwich 2.png",
-                  title: "Mol go'shti burger",
-                  narx: "\$20",
+                 SizedBox(height: 25,),
+                 Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children:<Widget> [
+                   ThreeCategory(
+                      image: "assets/icons/burger_sandwich 2.png",
+                      title: "Mol go'shti burger",
+                      narx: "\$20",
+                    ),
+                    ThreeCategory(
+                      image: "assets/icons/burger_sandwich 2.png",
+                      title: "Mol go'shti burger",
+                      narx: "\$20",
+                    ),
+                    
+                  ],
                 ),
               ],
             )

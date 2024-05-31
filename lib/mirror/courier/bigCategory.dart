@@ -8,30 +8,49 @@ class Bigcategory extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      children:<Widget> [
-        Category(
-          image: "assets/icons/Ellipse 2.png",
-          titel: "Barchasi",
-          isDone: true,
-        ),
-        Category(
-          image: "assets/icons/burger_sandwich 1.png",
-          titel: "Fast food",
-          isDone: false,
-        ),
-        Category(
-          image: "assets/icons/3626 1.png",
-          titel: "Meva",
-          isDone: false,
-        ),
-        Category(
-          image: "assets/icons/burger_sandwich 1.png",
-          titel: "Yeguliklar",
-          isDone: false,
-        ),
-      ],
+    return const SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child:  Row(
+        children:<Widget> [
+          SizedBox(width: 20,),
+          Category(
+            image: "assets/icons/Ellipse 2.png",
+            titel: "Barchasi",
+            isDone: true,
+          ),
+          SizedBox(width: 15,),
+          Category(
+            image: "assets/icons/burger_sandwich 1.png",
+            titel: "Fast food",
+            isDone: false,
+          ),
+          SizedBox(width: 15,),
+          Category(
+            image: "assets/icons/3626 1.png",
+            titel: "Mevali",
+            isDone: false,
+          ),
+          SizedBox(width: 15,),
+          Category(
+            image: "assets/icons/burger_sandwich 1.png",
+            titel: "Yeguliklar",
+            isDone: false,
+          ),
+          SizedBox(width: 15,),
+          Category(
+            image: "assets/icons/Ellipse 2.png",
+            titel: "Salat",
+            isDone: false,
+          ),
+          SizedBox(width: 15,),
+          Category(
+            image: "assets/icons/3626 1.png",
+            titel: "Mevali",
+            isDone: false,
+          ),
+          SizedBox(width: 20,),
+        ],
+      ),
     );
   }
 }
